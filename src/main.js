@@ -11,33 +11,33 @@
   const chats = [
     {
       isUser: true,
-      message: "프사는 왜 내렸어?"
+      message: "Why did you take down your profile picture?"
     },
     {
       isUser: true,
-      message: "상태명은 또 뭐야.."
+      message: "What the heck is a status name..."
     },
     {
       isUser: true,
-      message: "헤어진 것처럼.."
+      message: "Like we broke up..."
     },
     {
       isUser: false,
-      message: "없애든 말든 내 맘이지",
+      message: "Get rid of it or not, it's my choice.",
     },
     {
       isUser: true,
-      message: "꼭 싸운 티를 내야 돼?",
+      message: "Do I have to look like we fought?",
     },
     {
       isUser: false,
-      message: "내 공간인데 내 맘대로 사용하지도 못함?",
-      feedbackMessage: "감정을 표현하는 방식이 다소 공격적이에요. 상대방과의 타협을 찾기가 갈수록 어려워집니다. 상대방에게는 자신의 마음을 고려하지 않고 자기중심적인 태도로 여겨질 수 있어요."
+      message: "It's my space, but I can't even use it the way I want?",
+      feedbackMessage: "You're aggressive in the way you express your feelings, making it harder and harder to find a compromise with the other person. You may come across as self-centered to the other person, not considering their feelings."
     },
     {
       isUser: false,
-      message: "아됐어 그만 얘기해 나 잘거야",
-      feedbackMessage: "대화를 중단하고자 하면서 무관심한 태도를 보이고 있습니다. 타협점을 찾기 위해서는 대화를 이어가며 상호간의 의견을 조율하는 것이 필요합니다. 더 이해심 있게 표현하거나 상대방의 의견에 대해 존중하는 모습을 보여야 타협점을 찾을 수 있을 것입니다."
+      message: "Okay, stop talking. I'm going to bed.",
+      feedbackMessage: "You're showing indifference by wanting to stop the conversation. In order to find a compromise, you need to keep the conversation going. By being more understanding or showing respect for the other person's opinion, you may be able to find a compromise."
     },
   ]
 
@@ -52,11 +52,10 @@
     const view = document.createElement("div");
     view.className = "bottom-copy";
     const copies = [
-    "말싸움에 대한",
-    "텍스트나 캡쳐화면을",
-    "공유해 주시면",
-    "빠르게 상황을 파악해서",
-    "분석해 드립니다"
+    "Share text",
+    "or screenshots",
+    "of the altercation with us and",
+    "we'll get to the bottom of it quickly."
     ];
     copies.forEach((c) => {
       const p = document.createElement("p");
