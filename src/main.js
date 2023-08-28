@@ -305,7 +305,7 @@
   const showRequestButton = () => {
     const button = document.createElement("div");
     button.className = "request-button-container";
-    button.innerHTML = `<button class="request-button">AI로 분석하기</button>`;
+    button.innerHTML = `<button class="request-button">AI analysis results</button>`;
     button.addEventListener("click", (e) => showNextScreen());
     firstChat.appendChild(button);
     button.scrollIntoView({block: "nearest", inline: "nearest"});
