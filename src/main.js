@@ -365,7 +365,7 @@
     view.className = "feedback";
     const title = document.createElement("span");
     title.className = "feedback-title";
-    title.innerText = "AI 분석 결과";
+    title.innerText = "AI analysis results";
     const chatMessage = document.createElement("p");
     chatMessage.className = "feedback-chat";
     chatMessage.innerText = `"${chat.message}"`;
@@ -378,7 +378,7 @@
           <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
           <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
         </svg>
-        <span>다음 결과 보기</span>`;
+        <span>View the following results</span>`;
     nextButton.style.display = "none";
     view.appendChild(title); 
     view.appendChild(chatMessage);
