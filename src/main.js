@@ -10,34 +10,55 @@
 
   const chats = [
     {
-      isUser: true,
-      message: "프사는 왜 내렸어?"
-    },
-    {
-      isUser: true,
-      message: "상태명은 또 뭐야.."
-    },
-    {
-      isUser: true,
-      message: "헤어진 것처럼.."
+      isUser: false,
+      message: "Why are you doing this?"
     },
     {
       isUser: false,
-      message: "없애든 말든 내 맘이지",
+      message: "you want me to have a steady job, aren't u?",
+      feedbackMessage: "The solution for the other person is to approach the conversation with open-mindedness and seek a better understanding of your concerns and desires. The other person can express his own perspective calmly and respectfully, and they can work together to find a compromise that considers both of their needs and desires."
     },
     {
       isUser: true,
-      message: "꼭 싸운 티를 내야 돼?",
+      message: "of course I wanted you to have a steady job,",
+      feedbackMessage: "You could acknowledge and validate the other's desire for a steady job and explain his perspective in a more compassionate manner. You are using a calm and understanding tone, but your response lacks empathy for the other's need for stability."
+    },
+    {
+      isUser: true,
+      message: "so that you could take care of yourself",
     },
     {
       isUser: false,
-      message: "내 공간인데 내 맘대로 사용하지도 못함?",
-      feedbackMessage: "감정을 표현하는 방식이 다소 공격적이에요. 상대방과의 타협을 찾기가 갈수록 어려워집니다. 상대방에게는 자신의 마음을 고려하지 않고 자기중심적인 태도로 여겨질 수 있어요."
+      message: "So I'm doing that. I don't understand.",
+      feedbackMessage: "The other person could try to have an open and honest conversation with you to better understand each other's perspectives and find a compromise that meets both of their needs.The other person is feeling frustrated and confused about why his desire for a steady job is seen as wrong by you."
     },
     {
       isUser: false,
-      message: "아됐어 그만 얘기해 나 잘거야",
-      feedbackMessage: "대화를 중단하고자 하면서 무관심한 태도를 보이고 있습니다. 타협점을 찾기 위해서는 대화를 이어가며 상호간의 의견을 조율하는 것이 필요합니다. 더 이해심 있게 표현하거나 상대방의 의견에 대해 존중하는 모습을 보여야 타협점을 찾을 수 있을 것입니다."
+      message: "Why is this wrong?"
+    },
+    {
+      isUser: true,
+      message: "I just want you to do what you love and happy!!",
+      feedbackMessage: "You could explain your reasons behind wanting the other person to do what he loves and emphasize that his intentions are rooted in wanting his happiness and fulfillment. Your are expressing your desire for the other to pursue his passion and be happy, but you could communicate your concerns more effectively"
+    },
+    {
+      isUser: false,
+      message: "what am I supposed to do?",
+    },
+    {
+      isUser: false,
+      message: "Go back playing Jingle Bells?",
+      feedbackMessage: "The other person could try to convey his feelings more directly and calmly, discussing his concerns and possible alternatives for pursuing his interests. The other person is using sarcasm and expressing his frustration with your suggestion."
+    },
+    {
+      isUser: true,
+      message: "I'm not saying that baby..",
+      feedbackMessage: ""
+    },
+    {
+      isUser: false,
+      message: "I dont wanna talk anymore",
+      feedbackMessage: ""
     },
   ]
 
@@ -52,11 +73,10 @@
     const view = document.createElement("div");
     view.className = "bottom-copy";
     const copies = [
-    "말싸움에 대한",
-    "텍스트나 캡쳐화면을",
-    "공유해 주시면",
-    "빠르게 상황을 파악해서",
-    "분석해 드립니다"
+      "Share text",
+      "or screenshots",
+      "of the altercation with us and",
+      "we'll get to the bottom of it quickly."
     ];
     copies.forEach((c) => {
       const p = document.createElement("p");
@@ -300,14 +320,15 @@
     bubble.innerHTML = `<span class="textbox">${chat.message}</span>`;
     chat.bubble = bubble;
     firstChat.appendChild(bubble);
+  
     bubble.scrollIntoView({block: "nearest", inline: "nearest", behavior: "smooth"});
   }
 
   const showRequestButton = () => {
     const button = document.createElement("div");
     button.className = "request-button-container";
-    button.innerHTML = `<button class="request-button">AI로 분석하기</button>`;
-    button.addEventListener("click", (e) => showNextScreen());
+    button.innerHTML = `<button class="request-button">AI analysis</button>`;
+    button.addEventListener("click", () => showNextScreen());
     firstChat.appendChild(button);
     button.scrollIntoView({block: "nearest", inline: "nearest"});
   }
@@ -325,8 +346,11 @@
     const chat = chats[index];
     const bubble = chat.bubble;
     const isFirst = focusedChatIndex == null;
-    bubble.scrollIntoView(
-      {block: "nearest", inline: "nearest", behavior: "smooth"});
+    if (index > chats.length/2)
+      bubble.scrollIntoView(
+        {block: "nearest", inline: "nearest", behavior: "smooth"});
+    else
+      chats[index - 1].bubble.scrollIntoView({block: "nearest", inline: "nearest", behavior: "smooth"});
     focusedChatIndex = index;
     if (!isFirst) {
       const prevFocused = document.querySelector(".focused");
@@ -366,7 +390,7 @@
     view.className = "feedback";
     const title = document.createElement("span");
     title.className = "feedback-title";
-    title.innerText = "AI 분석 결과";
+    title.innerText = "AI analysis results";
     const chatMessage = document.createElement("p");
     chatMessage.className = "feedback-chat";
     chatMessage.innerText = `"${chat.message}"`;
@@ -379,7 +403,7 @@
           <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
           <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
         </svg>
-        <span>다음 결과 보기</span>`;
+        <span>See next results</span>`;
     nextButton.style.display = "none";
     view.appendChild(title); 
     view.appendChild(chatMessage);

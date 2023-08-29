@@ -51,9 +51,10 @@ body{
 .device-screen {
   width: 100%;
   height: 120%;
+  top: 0;
   position: absolute;
   flex-direction: column;
-  background-color:#9bbbd4; 
+  background-color:#ece5dd; 
 	align-items: center;
 	justify-content: flex-start;
 }
@@ -169,7 +170,7 @@ body{
 }
 .katalk-topbar {
   width: 100%;
-  background-color:#9bbbd4; 
+  background-color:#075e54; 
   height: 100px;
   border-bottom: 1px solid grey;
   position: absolute;
@@ -189,7 +190,7 @@ body{
 .katalk-chat  {
   width: 100%;
   padding-top: 100px;
-  aspect-ratio: 9/18;
+  aspect-ratio: 9/16;
   border-width: 2px;
   display: flex;
   flex-direction: column;
@@ -222,7 +223,7 @@ body{
 }
 
 .bubble.userchat {
-  background-color: #F9EB54;
+  background-color: #dcf8c6;
   align-self: flex-end;
   padding-left: 1.5em;
   right: 1em;
@@ -278,6 +279,7 @@ body{
   -moz-box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.3);
   -o-box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.3);
   box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.3);
+  font-family: 'SUITE-Regular';
 }
     
 .feedback .feedback-chat {
@@ -306,6 +308,8 @@ body{
   min-height: 60px;
   margin-bottom: 0.5em;
   background-color: #85E6C5;
+  font-family: 'KIMM_Bold';
+  font-weight: thin;
   border-radius: 1em;
   color: black;
 }
@@ -358,7 +362,7 @@ body{
   content:"\A";
   border-style: solid;
   border-width: 10px 0px 10px 15px;
-  border-color: transparent transparent transparent #F9EB54;
+  border-color: transparent transparent transparent #dcf8c6;
   position: relative;
   left: 0.8em;
 }
@@ -377,7 +381,7 @@ body{
   min-width: 200px;
   min-height: 3em;
   margin-bottom: 1em;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'KIMM_Bold', sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 1.3px;
@@ -386,7 +390,6 @@ body{
   border: none;
   background-color: #84E4C3;
   border-radius: 1em;
-  font-family: 'KIMM_Bold';
   box-shadow: 12px 12px 24px rgba(79,209,197,.64);
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
@@ -728,7 +731,7 @@ article,aside,footer,header,nav,section{
 }
 
 section {
-  height: 180vh;
+  height: 150vh;
   min-height: 1500px;
 }
 h1{
@@ -1536,94 +1539,6 @@ button,input,select,textarea,label{
   align-self: flex-end;
 }
 
-
-@media (min-width: 641px){
-  .hero{
-    padding-top:160px;padding-bottom:128px
-  }
-  .hero::before,.hero::after{
-    left:calc(50% - 720px);width:1440px
-  }
-  .hero::before{
-    height:318px;background-size:1440px 318px
-  }
-  .hero::after{
-    height:347px;background-size:1440px 347px
-  }
-  .hero-copy{
-    margin-bottom:88px
-  }
-  .hero-paragraph{
-    padding-left:72px;padding-right:72px;
-  }
-
-  .hero-title {
-    font-size: 2em;
-    margin-bottom: 1em;
-  }
-
-  .hero-title.title-left {
-    padding-right: 5em;
-    align-self: center;
-  }
-
-  .hero-title.title-right {
-    padding-left: 5em;
-    align-self: center;
-  }
-
-  p{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 1em;  
-  }
-
-  .elementToScaleDownLeftTop {
-    -webkit-animation: scaleDownLeft 1s ease forwards;
-    animation: scaleDownLeft 1s ease forwards;
-  }
-
-  .bottom-copy {
-    position: absolute;
-    right: -80%;
-    bottom: 0;
-  }
-
-  .feedback {
-    margin-left: 0;
-    left: -5vw;
-    min-height: 600px;
-  }
-  .feedback-title {
-    font-size: 1.2em;
-  }
-  .feedback-content {
-    line-height: 2.5em;
-  }
-  .feedback-chat {
-    font-size: 1.5em;
-  }
-  .next-feedback-button {
-    cursor: pointer;
-    background: transparent;
-    border: 2px solid #85E6C5;
-    outline: none;
-    transition: 1s ease-in-out;
-    border-radius: 0;
-  }
-  .next-feedback-button svg {
-    display: block;
-  }
-  .bubble {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    margin-top: 0.7em;
-    margin-bottom: 0.7em;
-  }
-  .katalk-topbar {
-    min-height: 140px;
-  }
-}
 .has-animations .hero .hero-bg,.has-animations .hero::before,.has-animations .hero::after,.has-animations .hero-particles-container,.has-animations .site-header,.has-animations .hero-title,.has-animations .hero-paragraph,.has-animations .hero-cta,.has-animations .hero .mockup-bg,.has-animations .hero .device-mockup{
   opacity:0
 }
@@ -1854,7 +1769,8 @@ main{
   content:'';position:absolute;top:0;left:0;width:100%;display:block;height:1px;background:#1E233D
 }
 .footer-brand,.footer-links,.footer-social-links,.footer-copyright{
-  flex:none;width:100%;display:inline-flex;justify-content:center
+  flex:none;width:100%;display:inline-flex;justify-content:center;
+  color: black;
 }
 .footer-brand,.footer-links,.footer-social-links{
   margin-bottom:24px
@@ -1889,3 +1805,98 @@ main{
   }
 }
 
+@media (min-width: 641px){
+  .hero{
+    padding-top:160px;padding-bottom:128px
+  }
+  .hero::before,.hero::after{
+    left:calc(50% - 720px);width:1440px
+  }
+  .hero::before{
+    height:318px;background-size:1440px 318px
+  }
+  .hero::after{
+    height:347px;background-size:1440px 347px
+  }
+  .hero-copy{
+    margin-bottom:88px
+  }
+  .hero-paragraph{
+    padding-left:72px;padding-right:72px;
+  }
+
+  .hero-title {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+
+  .hero-title.title-left {
+    padding-right: 5em;
+    align-self: center;
+  }
+
+  .hero-title.title-right {
+    padding-left: 5em;
+    align-self: center;
+  }
+
+  p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1em;  
+  }
+
+  .elementToScaleDownLeftTop {
+    -webkit-animation: scaleDownLeft 1s ease forwards;
+    animation: scaleDownLeft 1s ease forwards;
+  }
+
+  .bottom-copy {
+    position: absolute;
+    right: -100%;
+    bottom: 0;
+  }
+
+  .feedback {
+    margin-left: 0;
+    left: -5vw;
+    min-height: 600px;
+  }
+  .feedback-title {
+    font-size: 1.2em;
+  }
+  .feedback-content {
+    line-height: 2.5em;
+  }
+  .feedback-chat {
+    font-size: 1.5em;
+  }
+  .next-feedback-button {
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #85E6C5;
+    outline: none;
+    transition: 1s ease-in-out;
+    border-radius: 0;
+    font-family: 'KIMM_Bold';
+  }
+  .next-feedback-button svg {
+    display: block;
+  }
+  .bubble {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+  }
+  .katalk-topbar {
+    min-height: 110px;
+  }
+
+  h5 {
+    font-size: 25px;
+  }
+  .mockup-container {
+    left: 35%;
+  }
+}
