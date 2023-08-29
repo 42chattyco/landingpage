@@ -260,7 +260,7 @@
   const firstChat = firstScreen.getElementsByClassName("katalk-chat")[0];
   let nextChatIndex = 1;
   let isShowingChat = false;
-  const chatInterval = 800;
+  const chatInterval = 1500;
   let focusedChatIndex = null;
 
   function disableScroll() {

@@ -1519,6 +1519,7 @@ button,input,select,textarea,label{
   align-items: center;
   flex-direction: column;
   height: 30vh;
+  min-height: 220px;
 }
 
 .hero-copy .hero-paragraph {
