@@ -1901,5 +1901,6 @@ main{
   }
   section {
     height: 170vh;
+    min-height: 1800px;
   }
 }
