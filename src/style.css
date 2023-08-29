@@ -316,7 +316,7 @@ body{
 
 .next-feedback-button svg {
   position: absolute;
-  translate: -10px -15px;
+  translate: -10px -5px;
   fill: none;
   stroke: #33BBC5;
   stroke-dasharray: 150 480;
@@ -1900,6 +1900,6 @@ main{
     left: 35%;
   }
   section {
-    height: 180vh;
+    height: 170vh;
   }
 }
