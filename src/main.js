@@ -11,54 +11,41 @@
   const chats = [
     {
       isUser: false,
-      message: "Why are you doing this?"
+      message: "Why r u doing this?"
     },
     {
       isUser: false,
-      message: "you want me to have a steady job, aren't u?",
-      feedbackMessage: "The solution for the other person is to approach the conversation with open-mindedness and seek a better understanding of your concerns and desires. The other person can express his own perspective calmly and respectfully, and they can work together to find a compromise that considers both of their needs and desires."
+      message: "u want me to have a steady job, don't u?",
     },
     {
       isUser: true,
-      message: "of course I wanted you to have a steady job,",
-      feedbackMessage: "You could acknowledge and validate the other's desire for a steady job and explain his perspective in a more compassionate manner. You are using a calm and understanding tone, but your response lacks empathy for the other's need for stability."
+      message: "Of course! I want u to have a steady job",
     },
     {
       isUser: true,
-      message: "so that you could take care of yourself",
+      message: "so that u can take care of yourself and get ur life together.",
     },
     {
       isUser: false,
-      message: "So I'm doing that. I don't understand.",
-      feedbackMessage: "The other person could try to have an open and honest conversation with you to better understand each other's perspectives and find a compromise that meets both of their needs.The other person is feeling frustrated and confused about why his desire for a steady job is seen as wrong by you."
-    },
-    {
-      isUser: false,
-      message: "Why is this wrong?"
+      message: "And I'm doing that, I don't understand. Why am I doing wrong???",
+      feedbackMessage: "The other person is feeling frustrated and defensive because he doesn't understand why his choice to have a steady job is considered wrong. You could try to explain your perspective more clearly and emphasize that you want him to pursue his passions and find fulfillment in his career."
     },
     {
       isUser: true,
-      message: "I just want you to do what you love and happy!!",
-      feedbackMessage: "You could explain your reasons behind wanting the other person to do what he loves and emphasize that his intentions are rooted in wanting his happiness and fulfillment. Your are expressing your desire for the other to pursue his passion and be happy, but you could communicate your concerns more effectively"
+      message: "I just want u to do what u love and be happy!!",
     },
     {
       isUser: false,
-      message: "what am I supposed to do?",
+      message: "What am I supposed to do?",
     },
     {
       isUser: false,
-      message: "Go back playing Jingle Bells?",
-      feedbackMessage: "The other person could try to convey his feelings more directly and calmly, discussing his concerns and possible alternatives for pursuing his interests. The other person is using sarcasm and expressing his frustration with your suggestion."
+      message: "Go back to playing Jingle Bells?",
+      feedbackMessage: "The other pserson feels frustrated and misunderstood by your response. He believes that you are implying that his current job choice is insignificant or trivial. and he's using sarcasm and expressing his frustration with your suggestion because he must have made a decision after thinking a lot for you"
     },
     {
       isUser: true,
-      message: "I'm not saying that baby..",
-      feedbackMessage: ""
-    },
-    {
-      isUser: false,
-      message: "I dont wanna talk anymore",
-      feedbackMessage: ""
+      message: "I'm not saying that bby..",
     },
   ]
 

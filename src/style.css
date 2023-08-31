@@ -1518,7 +1518,7 @@ button,input,select,textarea,label{
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  height: 30vh;
+  height: 35vh;
   min-height: 220px;
 }
 
